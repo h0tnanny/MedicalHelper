@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedicalHelperUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        MinHeight="800" MinWidth="1200" WindowState="Maximized"
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="980"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <Label Height="130" HorizontalAlignment="Center"
+               Content="MedicalHelper" FontSize="100" FontFamily="OpenSans" FontWeight="Medium" Foreground="#3E66FB"/>
+            <Grid Margin="0,20,0,0">
+                <StackPanel Orientation="Vertical">
+                    <Label Width="600" Content="Логин" FontSize="24"/>
+                    <TextBox Height="50" Width="600"/>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0,20,0,0">
+                <StackPanel Orientation="Vertical">
+                    <Label Width="600" Content="Пароль" FontSize="24"/>
+                    <TextBox Height="50" Width="600"/>
+                    <Label Width="600" HorizontalContentAlignment="Right" Content="Забыли пароль?" FontSize="18"/>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0,35,0,0">
+                <StackPanel Orientation="Vertical">
+                    <Button Height="50" Width="600" Content="Войти" FontSize="24"/>
+                    <Label Width="600" FontSize="18" HorizontalContentAlignment="Center">
+                        <TextBlock TextDecorations="Underline">Зарегистрироваться</TextBlock>
+                    </Label>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
